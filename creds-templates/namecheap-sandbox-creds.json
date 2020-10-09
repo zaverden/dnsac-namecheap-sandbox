@@ -1,0 +1,7 @@
+{
+  "namecheap":{
+    "apikey": "${NAMECHEAP_APIKEY}",
+    "apiuser": "${NAMECHEAP_APIUSER}",
+    "BaseURL": "https://api.sandbox.namecheap.com/xml.response"
+  }
+}

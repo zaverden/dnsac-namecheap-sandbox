@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# usage
+# ./build-namecheap-creds prod
+# ./build-namecheap-creds production
+# ./build-namecheap-creds sandbox
+
+: ${NAMECHEAP_APIKEY:?NAMECHEAP_APIKEY is not provided}
+: ${NAMECHEAP_APIUSER:?NAMECHEAP_APIUSER is not provided}
+
+NAMECHEAP_ENV=${1:-sandbox}
+
+if [ $NAMECHEAP_ENV = "prod" ]; then
+  NAMECHEAP_ENV=production
+fi
+
+if [ $NAMECHEAP_ENV != "production" ]; then
+  NAMECHEAP_ENV=sandbox
+fi
+
+echo Generating creds.json for namecheap ${NAMECHEAP_ENV}
+
+case $NAMECHEAP_ENV in
+  production)
+    CRED_TEMPLATE_FILENAME="namecheap-creds.json"
+    ;;
+  sandbox)
+    CRED_TEMPLATE_FILENAME="namecheap-sandbox-creds.json"
+    ;;
+esac
+
+envsubst < "creds-templates/${CRED_TEMPLATE_FILENAME}" > creds.json
