@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# usage
+# ./build-digitalocean-creds
+
+: ${DIGITALOCEAN_TOKEN:?DIGITALOCEAN_TOKEN is not provided}
+echo Generating creds.json for digitalocean
+envsubst < "creds-templates/digitalocean-creds.json" > creds.json
