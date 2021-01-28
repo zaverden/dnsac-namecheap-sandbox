@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DNSCONTROL_VERSION=v3.5.2
+DNSCONTROL_IMAGE_TAG=stackexchange/dnscontrol:${DNSCONTROL_VERSION}
+
+docker run --rm \
+  --volume $(pwd)/dnsconfig.js:/dns/dnsconfig.js \
+  --volume $(pwd)/creds.json:/dns/creds.json \
+  --volume $(pwd)/configs:/dns/configs \
+  ${DNSCONTROL_IMAGE_TAG} \
+  dnscontrol $@
