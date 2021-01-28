@@ -101,6 +101,16 @@ declare function MX(
   ...modifiers: Modifier[]
 ): Modifier;
 
+/** https://stackexchange.github.io/dnscontrol/js#NAMESERVER_TTL */
+declare function NAMESERVER_TTL(ttl: number | string): Modifier;
+
+/** https://stackexchange.github.io/dnscontrol/js#NS  */
+declare function NS(
+  name: string,
+  target: string,
+  ...modifiers: Modifier[]
+): Modifier;
+
 /** https://stackexchange.github.io/dnscontrol/js#TXT */
 declare function TXT(
   name: string,

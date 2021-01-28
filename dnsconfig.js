@@ -1,5 +1,11 @@
 var NONE_REG = NewRegistrar("none", "NONE");
-var NAMECHEAP = NewDnsProvider("namecheap", "NAMECHEAP");
+var DIGITALOCEAN = NewDnsProvider("digitalocean", "DIGITALOCEAN");
 
-D("dzaspirity.com", NONE_REG, DnsProvider(NAMECHEAP), DefaultTTL("30m"));
+D(
+  "zaverden.com",
+  NONE_REG,
+  DnsProvider(DIGITALOCEAN),
+  DefaultTTL("10m"),
+  NAMESERVER_TTL("30m")
+);
 require_glob("./configs/");
