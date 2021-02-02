@@ -29,7 +29,7 @@ jobs:
         if: github.event_name == 'pull_request'
 
       - name: Push changes
-        run: echo bash ./dnscontrol push
+        run: bash ./dnscontrol push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
       - name: Clean credentials
