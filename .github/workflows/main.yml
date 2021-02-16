@@ -28,6 +28,14 @@ jobs:
         run: bash ./dnscontrol preview
         if: github.event_name == 'pull_request'
 
+      - name: Comment preview results
+        uses: machine-learning-apps/pr-comment@1.0.0
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          path: output
+
       - name: Push changes
         run: bash ./dnscontrol push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
