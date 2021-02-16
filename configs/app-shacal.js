@@ -7,5 +7,14 @@ D_EXTEND(
   CNAME(
     "_3bd1db5d9751caaa805d635fbaf14bc0.shacal.staging-app",
     "_3df7dd27cc5551416f3a91b179103f8a.hkmpvcwbzw.acm-validations.aws."
+  ),
+
+  CNAME(
+    "shacal.app",
+    "d-mmpcpeee1k.execute-api.us-east-2.amazonaws.com."
+  ),
+  CNAME(
+    "shacal.staging-app",
+    "d-jwiarcx16a.execute-api.us-east-2.amazonaws.com."
   )
 );
