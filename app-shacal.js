@@ -1,0 +1,11 @@
+D_EXTEND(
+  "zaverden.com",
+  CNAME(
+    "_0136dcc2c529f5e16f388543367a7add.shacal.app",
+    "_b6f6844a7a55648a09aa23ca64d68766.hkmpvcwbzw.acm-validations.aws."
+  ),
+  CNAME(
+    "_3bd1db5d9751caaa805d635fbaf14bc0.shacal.staging-app",
+    "_3df7dd27cc5551416f3a91b179103f8a.hkmpvcwbzw.acm-validations.aws."
+  )
+);
