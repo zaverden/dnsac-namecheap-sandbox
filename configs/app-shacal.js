@@ -16,5 +16,25 @@ D_EXTEND(
   CNAME(
     "shacal.staging-app",
     "d-jwiarcx16a.execute-api.us-east-2.amazonaws.com."
+  ),
+  CNAME(
+    "em6847.shacal.app",
+    "u20717023.wl024.sendgrid.net."
+  ),
+  CNAME(
+    "s1._domainkey.shacal.app",
+    "s1.domainkey.u20717023.wl024.sendgrid.net."
+  ),
+  CNAME(
+    "s2._domainkey.shacal.app",
+    "s2.domainkey.u20717023.wl024.sendgrid.net."
+  ),
+  CNAME(
+    "url8730.shacal.app",
+    "sendgrid.net."
+  ),
+  CNAME(
+    "20717023.shacal.app",
+    "sendgrid.net."
   )
 );
