@@ -36,5 +36,9 @@ D_EXTEND(
   CNAME(
     "20717023.shacal.app",
     "sendgrid.net."
+  ),
+  TXT(
+    "shacal.app",
+    "google-site-verification=ZWLHv_Mz5fH3jcgM6W5oDCfEiyQMUYdWDVwyYLxy4Yg"
   )
 );
